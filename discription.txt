@@ -1,0 +1,22 @@
+CREATE TABLE main_type (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    description VARCHAR(255)
+);
+
+CREATE TABLE workout_plan (
+    id SERIAL PRIMARY KEY,
+    main_type_id INTEGER REFERENCES main_type(id),
+    sub_type_id INTEGER REFERENCES sub_type(id),
+    body_part_id INTEGER REFERENCES body_part(id),
+    day INTEGER,
+    exercise_id INTEGER REFERENCES exercise(id)
+);
+UPDATE main_type
+ET is_active = FALSE
+Where id =2;.
+
+
+INSERT INTO workout_plan(main_type_id,sub_type_id,body_part_id,day,exercise_id,is_active) VALUES(1,1,1,1,1,TRUE)";
+
+INSERT INTO sub_type(name, description , main_type_id,is_active) VALUES("12 Week Plan","Get Bigger Size in 12 Week",1,TRUE);
